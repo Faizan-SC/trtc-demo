@@ -17,9 +17,9 @@ class ScreenViewController: UIViewController {
     }
 
     let buttonTitleMap : [State: String] = [
-        .waiting : "等待屏幕分享启动",
-        .started : "停止屏幕分享",
-        .stopped : "开始屏幕分享"
+        .waiting : "Waiting",
+        .started : "Started",
+        .stopped : "Stopped"
     ]
 
     var state : State = .stopped {
@@ -62,7 +62,7 @@ class ScreenViewController: UIViewController {
     }
     
     func setupUI() {
-        title = "屏幕分享"
+        title = "Some title"
         self.view.backgroundColor = UIColor(red: 0.14, green: 0.14, blue: 0.14, alpha: 1)
 
         //录屏按钮
@@ -77,7 +77,7 @@ class ScreenViewController: UIViewController {
 
         guard #available(iOS 11.0, *) else {
             recordScreenButton.isUserInteractionEnabled = false
-            recordScreenButton.setTitle("仅支持 iOS 11 及以上系统", for: .normal)
+            recordScreenButton.setTitle("Record button ios 11", for: .normal)
             return;
         }
         //静音按钮
@@ -89,7 +89,7 @@ class ScreenViewController: UIViewController {
         
         //录屏提示label
         recordStateLabel.frame = CGRect(x: UIScreen.main.bounds.size.width * 32.0/375, y: UIScreen.main.bounds.size.height / 3.0, width: UIScreen.main.bounds.size.width * 311.0/375, height: 45)
-        recordStateLabel.text = "您正在分享屏幕"
+        recordStateLabel.text = "record state label text"
         recordStateLabel.textAlignment = NSTextAlignment.center
         recordStateLabel.textColor = .white
         self.view.addSubview(recordStateLabel)
@@ -145,7 +145,7 @@ class ScreenViewController: UIViewController {
         /// userSig是进入房间的用户签名，相当于密码（这里生成的是测试签名，正确做法需要业务服务器来生成，然后下发给客户端）
         param.userSig  = GenerateTestUserSig.genTestUserSig(param.userId)
 
-        roomStateLabel.text = "进房中..."
+        roomStateLabel.text = "room state label text"
         /// 指定以“视频通话场景”（TRTCAppScene.videoCall）进入房间
         trtcCloud.enterRoom(param, appScene: TRTCAppScene.videoCall)
         trtcCloud.startScreenCapture(byReplaykit: videoEncParam, appGroup: APPGROUP)
@@ -185,12 +185,12 @@ extension ScreenViewController {
 
     @objc func onTapMuteButton(button: UIButton) {
         if button.tag == 0 {
-            print("开始静音")
+            print("RTC Mic On")
             button.setImage(UIImage(named: "rtc_mic_on"), for:.normal)
             button.tag = 1
             trtcCloud.stopLocalAudio()
         } else if button.tag == 1 {
-            print("关闭静音")
+            print("RTC Mic Off")
             button.setImage(UIImage(named: "rtc_mic_off"), for: .normal)
             button.tag = 0
             trtcCloud.startLocalAudio()
@@ -202,10 +202,10 @@ extension ScreenViewController {
 extension  ScreenViewController : TRTCCloudDelegate {
     func onEnterRoom(_ result: Int) {
         roomStateLabel.text = """
-        房间号: \(param.roomId)
-        用户名: \(param.userId)
-        分辨率: "720 x 1280"
-        请在其他设备上使用不同用户名进入相同的房间进行观看
+        Room Id: \(param.roomId)
+        Room user id: \(param.userId)
+        Resolution: "720 x 1280"
+        Bla bla bla
         """
         trtcCloud.startLocalAudio()
     }

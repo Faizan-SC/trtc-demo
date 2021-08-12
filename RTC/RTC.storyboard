@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oyw-0I-Rbq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oyw-0I-Rbq">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -117,6 +117,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="281-Ju-vlg"/>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="281-Ju-vlg" firstAttribute="trailing" secondItem="Al2-J5-gwp" secondAttribute="trailing" constant="10" id="10d-zj-lL2"/>
@@ -159,7 +160,6 @@
                             <constraint firstItem="Al2-J5-gwp" firstAttribute="width" secondItem="Po8-a0-5rN" secondAttribute="width" id="vTI-e2-W3C"/>
                             <constraint firstItem="71l-Ef-a7D" firstAttribute="centerX" secondItem="dkb-Rf-r82" secondAttribute="centerX" id="yJN-pq-KDZ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="281-Ju-vlg"/>
                     </view>
                     <navigationItem key="navigationItem" id="QGR-s2-cXX"/>
                     <connections>
@@ -205,7 +205,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入房间号：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aE7-db-Ewi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aE7-db-Ewi">
                                 <rect key="frame" x="32" y="80" width="311" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="JKO-4Q-e64"/>
@@ -214,7 +214,7 @@
                                 <color key="textColor" red="0.0" green="0.65098039220000004" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入用户名：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okb-jM-Dw6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okb-jM-Dw6">
                                 <rect key="frame" x="32" y="170" width="311" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="gq1-aM-zHW"/>
@@ -223,14 +223,14 @@
                                 <color key="textColor" red="0.0" green="0.65098039220000004" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UJ-6L-UfL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UJ-6L-UfL">
                                 <rect key="frame" x="32" y="560" width="311" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.65098039220000004" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="ioh-kz-xAK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="进入房间">
+                                <state key="normal" title="Enter Room">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -243,6 +243,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="JzS-db-Fi7"/>
                         <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="JzS-db-Fi7" firstAttribute="trailing" secondItem="8UJ-6L-UfL" secondAttribute="trailing" constant="32" id="3Sh-Ms-HFc"/>
@@ -261,7 +262,6 @@
                             <constraint firstItem="JzS-db-Fi7" firstAttribute="trailing" secondItem="aE7-db-Ewi" secondAttribute="trailing" constant="32" id="v24-B2-TAy"/>
                             <constraint firstItem="EOG-3i-pqV" firstAttribute="trailing" secondItem="okb-jM-Dw6" secondAttribute="trailing" id="xoq-ai-Hqa"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="JzS-db-Fi7"/>
                     </view>
                     <connections>
                         <outlet property="roomIdTextField" destination="ZQp-YZ-vMs" id="lu5-SA-Erq"/>

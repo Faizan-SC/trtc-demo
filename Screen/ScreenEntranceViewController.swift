@@ -20,9 +20,9 @@ class ScreenEntranceViewController: UIViewController {
     }
     
     func setUpUI() {
-        title = "屏幕分享"
+        title = "Some title screen entrance view controller"
         let roomLabel = UILabel(frame: CGRect(x: UIScreen.main.bounds.size.width * 32.0/375, y: 144, width: UIScreen.main.bounds.size.width * 311.0/375, height: 35))
-        roomLabel.text = "请输入房间号:"
+        roomLabel.text = "Room label text:"
         roomLabel.textColor = UIColor(red: -0.32, green: 0.66, blue: 0.4, alpha: 1)
         roomLabel.textAlignment = NSTextAlignment.left
         self.view.addSubview(roomLabel)
@@ -35,7 +35,7 @@ class ScreenEntranceViewController: UIViewController {
         
         //用户名label
         let userNameLabel = UILabel(frame: CGRect(x: UIScreen.main.bounds.size.width * 32.0/375, y: 234, width: UIScreen.main.bounds.size.width * 311.0/375, height: 35))
-        userNameLabel.text = "请输入用户名:"
+        userNameLabel.text = "user name label text:"
         userNameLabel.textColor = UIColor(red: -0.32, green: 0.66, blue: 0.4, alpha: 1)
         userNameLabel.textAlignment = NSTextAlignment.left
         self.view.addSubview(userNameLabel)
@@ -51,7 +51,7 @@ class ScreenEntranceViewController: UIViewController {
         enterRoomButton.layer.masksToBounds = true
         enterRoomButton.layer.cornerRadius = 4.0
         enterRoomButton.backgroundColor = UIColor(red: -0.32, green: 0.66, blue: 0.4, alpha: 1)
-        enterRoomButton.setTitle("进入房间", for: .normal)
+        enterRoomButton.setTitle("enter room button title", for: .normal)
         enterRoomButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
         enterRoomButton.addTarget(self, action: #selector(enterRoom), for: .touchUpInside)
         self.view.addSubview(enterRoomButton)

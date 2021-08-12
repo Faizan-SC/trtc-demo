@@ -11,7 +11,7 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "TRTC示例教程"
+        self.title = "TRTC Title"
     }
     
     @IBAction func onRTCClicked(_ sender: UIButton) {

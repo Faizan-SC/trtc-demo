@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IW5-Xj-cqW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IW5-Xj-cqW">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LiveRoomCellId" id="LNk-wp-Shs">
-                                        <rect key="frame" x="0.0" y="28" width="311" height="70"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="311" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LNk-wp-Shs" id="fab-W8-W8Y">
                                             <rect key="frame" x="0.0" y="0.0" width="311" height="70"/>
@@ -41,14 +41,14 @@
                                     <outlet property="delegate" destination="IW5-Xj-cqW" id="Bra-VE-jCb"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ea-Bj-aVy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ea-Bj-aVy">
                                 <rect key="frame" x="32" y="560" width="311" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.65098039220000004" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="UGU-Y2-t2z"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="开始直播">
+                                <state key="normal" title="Go Live">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -61,6 +61,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="8UT-SK-BX4"/>
                         <color key="backgroundColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="8UT-SK-BX4" firstAttribute="trailing" secondItem="5Ea-Bj-aVy" secondAttribute="trailing" constant="32" id="07I-Lr-tkj"/>
@@ -71,7 +72,6 @@
                             <constraint firstItem="8UT-SK-BX4" firstAttribute="trailing" secondItem="VtT-Nu-Ybm" secondAttribute="trailing" constant="32" id="dwr-lV-AgL"/>
                             <constraint firstItem="VtT-Nu-Ybm" firstAttribute="top" secondItem="8UT-SK-BX4" secondAttribute="top" constant="40" id="rUM-eS-F3s"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="8UT-SK-BX4"/>
                     </view>
                     <connections>
                         <outlet property="liveRoomTableView" destination="VtT-Nu-Ybm" id="QPc-Ug-VMS"/>
@@ -567,6 +567,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="epD-p2-3Qn"/>
                         <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="l5G-gi-rnh" firstAttribute="top" secondItem="XbK-c0-bEv" secondAttribute="top" id="5hU-bl-anU"/>
@@ -613,7 +614,6 @@
                             <constraint firstItem="Kbn-Cu-a0F" firstAttribute="centerX" secondItem="cOI-Fc-WLv" secondAttribute="centerX" id="zP0-Iw-0c4"/>
                             <constraint firstItem="epD-p2-3Qn" firstAttribute="bottom" secondItem="7Ta-eU-3LP" secondAttribute="bottom" constant="10" id="zuF-lG-S7M"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="epD-p2-3Qn"/>
                     </view>
                     <navigationItem key="navigationItem" id="038-6n-yy9"/>
                     <connections>
@@ -1121,6 +1121,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Eq6-Ri-dns"/>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Eq6-Ri-dns" firstAttribute="bottom" secondItem="cPw-xr-an7" secondAttribute="bottom" constant="10" id="0ig-HU-h7M"/>
@@ -1169,7 +1170,6 @@
                             <constraint firstItem="EEd-CA-EW3" firstAttribute="top" secondItem="AXN-Px-us0" secondAttribute="top" id="qhz-4l-LW9"/>
                             <constraint firstItem="Nxb-YD-QNZ" firstAttribute="top" secondItem="xTN-rK-Ndl" secondAttribute="bottom" constant="16" id="tH2-Au-Y8v"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Eq6-Ri-dns"/>
                     </view>
                     <navigationItem key="navigationItem" id="OB8-rz-R4k"/>
                     <connections>
