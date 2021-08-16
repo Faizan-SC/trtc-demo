@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 进入腾讯云实时音视频[控制台](https://console.cloud.tencent.com/rav ) 创建应用，即可看到 SDKAppId，
  * 它是腾讯云用于区分客户的唯一标识。
  */
-static const int SDKAppID = 1400559497;
+static const int SDKAppID = 1400546468;
 
 /**
  *  签名过期时间，建议不要设置的过短
@@ -46,7 +46,7 @@ static const int EXPIRETIME = 604800;
  * 注意：该方案仅适用于调试Demo，正式上线前请将 UserSig 计算代码和密钥迁移到您的后台服务器上，以避免加密密钥泄露导致的流量盗用。
  * 文档：https://cloud.tencent.com/document/product/647/17275#Server
  */
-static NSString * const SECRETKEY = @"7961c1595aead7a7a04d3ad5e094b76c3ed9d43fffdb5cb63d7383ae09a77d9f";
+static NSString * const SECRETKEY = @"a40120fd3863b39a3ee1d9e4c7277184221d553abbf94ffeacf3ed94f26366d3";
 
 
 @interface GenerateTestUserSig : NSObject

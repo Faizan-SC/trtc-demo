@@ -43,7 +43,6 @@
 		81E3C986241820EA00366606 /* LiveSubVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E3C985241820EA00366606 /* LiveSubVideoView.swift */; };
 		837598CF24343929537D3D60 /* libPods-TRTCSimpleDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC61F06028F8DAF18C55073D /* libPods-TRTCSimpleDemo.a */; };
 		B33F93CA26C3E8810004420A /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B33F93C926C3E8810004420A /* CoreServices.framework */; };
-		B33F93CB26C3E8BE0004420A /* TXLiteAVSDK_ReplayKitExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C0A3D42490CAB000E50613 /* TXLiteAVSDK_ReplayKitExt.framework */; };
 		B33F93CD26C3E9010004420A /* libAlamofire.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B33F93CC26C3E9010004420A /* libAlamofire.a */; };
 		B33F93D126C3EBB60004420A /* libswiftWebKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B33F93D026C3EBB60004420A /* libswiftWebKit.tbd */; };
 		B33F93D226C3EC1B0004420A /* TXReplayKit_Screen.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4533717A2491F24400E18040 /* TXReplayKit_Screen.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -211,7 +210,6 @@
 				B3DC9EF026C4C9E900563A13 /* libsqlite3.tbd in Frameworks */,
 				B33F93D126C3EBB60004420A /* libswiftWebKit.tbd in Frameworks */,
 				B33F93CD26C3E9010004420A /* libAlamofire.a in Frameworks */,
-				B33F93CB26C3E8BE0004420A /* TXLiteAVSDK_ReplayKitExt.framework in Frameworks */,
 				FDCEFF4B241BBDD6000BFA0B /* TXLiteAVSDK_TRTC.framework in Frameworks */,
 				B33F93CA26C3E8810004420A /* CoreServices.framework in Frameworks */,
 				FDD9E0302440840900FD5B5A /* libresolv.tbd in Frameworks */,
@@ -722,6 +720,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -779,6 +778,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -808,7 +808,10 @@
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-l\"Alamofire\"";
+				OTHER_LDFLAGS = (
+					"-l\"Alamofire\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = mohalla.tencent.liteavdemo;
 				PRODUCT_NAME = SimpleDemo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -841,7 +844,10 @@
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-l\"Alamofire\"";
+				OTHER_LDFLAGS = (
+					"-l\"Alamofire\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = mohalla.tencent.liteavdemo;
 				PRODUCT_NAME = SimpleDemo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
